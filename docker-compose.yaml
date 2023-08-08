@@ -125,3 +125,8 @@ services:
 
   geoserver:
     image: camptocamp/geoserver:2.22.2
+    ports:
+      - 8080:8080
+    volumes:
+      - ${ESRI_FONT_PATH:-/usr/local/share/fonts/esri}:/usr/local/share/fonts/esri:ro
+      - ~/data/geoserver_datadir:/mnt/geoserver_datadir:rw
