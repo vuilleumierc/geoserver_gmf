@@ -113,9 +113,15 @@ services:
       file: docker-compose-lib.yaml
       service: tools
 
-  # db:
-  #   extends:
-  #     file: docker-compose-lib.yaml
-  #     service: db
-  #   volumes:
-  #     - postgresql_data:/var/lib/postgresql/data
+  db:
+    extends:
+      file: docker-compose-lib.yaml
+      service: db
+    image: postgis/postgis:14-3.2-alpine
+    ports:
+      - 5432:5432
+    volumes:
+      - ~/data/pg:/var/lib/postgresql/data:rw
+
+  geoserver:
+    image: camptocamp/geoserver:2.22.2
