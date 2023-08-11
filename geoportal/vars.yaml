@@ -34,8 +34,8 @@ vars:
           map: {}
           view: &view
             projection: EPSG:{srid}
-            center: [2600000, 1200000]
-            zoom: 3
+            center: [2653950, 1247630]
+            zoom: 1
             resolutions: *resolutions
             extent: *extent
           geolocalisation: True
@@ -157,6 +157,9 @@ vars:
     # Functionalities that are made available to Mako templates.
     available_in_templates:
       - default_basemap
+
+  servers:
+    geoserver: '{GEOSERVER_URL}'
 
   layers:
     geometry_validation: True
@@ -389,3 +392,7 @@ runtime_postprocess:
   - expression: int({})
     vars:
       - cache.std.arguments.port
+
+runtime_environment:
+  - name: GEOSERVER_URL
+    default: http://geoserver:8080/geoserver/ows/

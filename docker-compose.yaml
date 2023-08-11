@@ -94,6 +94,8 @@ services:
       - config:ro
     volumes:
       - /var/sig:/var/sig:ro
+    environment:
+      - GEOSERVER_URL
 
   alembic:
     extends:
