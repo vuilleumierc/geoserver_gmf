@@ -28,7 +28,7 @@ vars:
   interfaces_config:
     default:
       constants:
-        defaultTheme: Demo
+        defaultTheme: GeoServer
         defaultLang: '{default_locale_name}'
         gmfOptions:
           map: {}
@@ -160,6 +160,7 @@ vars:
 
   servers:
     geoserver: '{GEOSERVER_URL}'
+    geoserver_workspace: '{GEOSERVER_WORKSPACE_URL}'
 
   layers:
     geometry_validation: True
@@ -396,3 +397,5 @@ runtime_postprocess:
 runtime_environment:
   - name: GEOSERVER_URL
     default: http://geoserver:8080/geoserver/ows/
+  - name: GEOSERVER_WORKSPACE_URL
+    default: http://geoserver:8080/geoserver/agis/wms
