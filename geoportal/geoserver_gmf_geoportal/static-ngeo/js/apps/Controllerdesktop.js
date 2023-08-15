@@ -54,7 +54,10 @@ class Controller extends AbstractDesktopController {
 /**
  * @hidden
  */
-const geoserver_gmfModule = angular.module('Appdesktop', [geoserver_gmfBase.name, gmfControllersAbstractDesktopController.name]);
+const geoserver_gmfModule = angular.module('Appdesktop', [
+  geoserver_gmfBase.name,
+  gmfControllersAbstractDesktopController.name,
+]);
 
 geoserver_gmfModule.value('gmfContextualdatacontentTemplateUrl', 'gmf/contextualdata');
 geoserver_gmfModule.run(

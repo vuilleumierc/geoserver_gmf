@@ -43,7 +43,10 @@ class Controller extends AbstractMobileController {}
 /**
  * @hidden
  */
-const geoserver_gmfModule = angular.module('Appmobile', [geoserver_gmfBase.name, gmfControllersAbstractMobileController.name]);
+const geoserver_gmfModule = angular.module('Appmobile', [
+  geoserver_gmfBase.name,
+  gmfControllersAbstractMobileController.name,
+]);
 
 geoserver_gmfModule.controller('MobileController', Controller);
 

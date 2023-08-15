@@ -83,10 +83,7 @@ module.exports = {
   resolve: {
     modules: ['/usr/lib/node_modules'],
     alias: {
-      'geoserver_gmf': path.resolve(
-        __dirname,
-        'geoserver_gmf_geoportal/static-ngeo/js'
-      ),
+      'geoserver_gmf': path.resolve(__dirname, 'geoserver_gmf_geoportal/static-ngeo/js'),
     },
   },
 };

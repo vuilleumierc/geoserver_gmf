@@ -43,7 +43,10 @@ class Controller extends AbstractAPIController {}
 /**
  * @hidden
  */
-const geoserver_gmfModule = angular.module('Appiframe_api', [geoserver_gmfBase.name, gmfControllersAbstractAPIController.name]);
+const geoserver_gmfModule = angular.module('Appiframe_api', [
+  geoserver_gmfBase.name,
+  gmfControllersAbstractAPIController.name,
+]);
 
 geoserver_gmfModule.controller('IframeAPIController', Controller);
 
