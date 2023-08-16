@@ -18,6 +18,10 @@ vars:
   # This also defines the language used for the text search.
   default_locale_name: fr
 
+  authentication:
+    two_factor: true
+    two_factor_issuer_name: 'geoserver_gmf'
+
   # All the application interfaces used to create the apache rewrite rules
   interfaces:
     - name: desktop
@@ -210,10 +214,10 @@ vars:
 
   smtp:
     # Used to send email from various feature
-    host: smtp.example.com
+    host: '{SMTP_HOST}'
     ssl: True
-    user: <username>
-    password: <password>
+    user: '{SMTP_USER}'
+    password: '{SMTP_PASSWORD}'
     starttls: False
 
   reset_password:
@@ -399,3 +403,9 @@ runtime_environment:
     default: http://geoserver:8080/geoserver/ows/
   - name: GEOSERVER_WORKSPACE_URL
     default: http://geoserver:8080/geoserver/agis/wms
+  - name: SMTP_HOST
+    default: host
+  - name: SMTP_USER
+    default: user
+  - name: SMTP_PASSWORD
+    default: pass

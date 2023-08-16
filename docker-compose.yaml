@@ -96,6 +96,9 @@ services:
       - /var/sig:/var/sig:ro
     environment:
       - GEOSERVER_URL
+      - SMTP_HOST
+      - SMTP_USER
+      - SMTP_PASSWORD
 
   alembic:
     extends:

@@ -3,6 +3,7 @@
 __pycache__/
 /.env
 /env.personal
+/env.secrets
 /docker-compose.override.yaml
 /upgrade
 /.upgrade.yaml
